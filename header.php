@@ -17,7 +17,7 @@
                 <a href="index.php#contacto">Contacto</a>
             </nav>
             <div class="btns">
-                <button class="btn-orange">Reservar Mesa</button>
+                <button class="btn-orange">Administración</button>
                 <button class="btn-green">Pedir Online</button>
             </div>
 </div>
