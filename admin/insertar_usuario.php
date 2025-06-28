@@ -11,6 +11,7 @@ $mensaje = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nombre = trim($_POST['nombre'] ?? '');
+    $username = trim($_POST['username'] ?? '');
     $rut = trim($_POST['rut'] ?? '');
     $password = $_POST['password'] ?? '';
     $password2 = $_POST['password2'] ?? '';
@@ -35,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         return $dv == $dvEsperado;
     }
 
-    // Formatear RUT chileno XX.XXX.XXX-Y
+    // Formatea RUT chileno XX.XXX.XXX-Y
     function formatear_rut($rut) {
         $rut = preg_replace('/[^kK0-9]/', '', $rut);
         $cuerpo = substr($rut, 0, -1);
@@ -45,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // Validación básica
-    if (empty($nombre) || empty($rut) || empty($password) || empty($password2)) {
+    if (empty($nombre) || empty($username) || empty($rut) || empty($password) || empty($password2)) {
         $mensaje = "Todos los campos son obligatorios.";
     } elseif (!validar_rut($rut)) {
         $mensaje = "El RUT ingresado no es válido.";
@@ -56,16 +57,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $rut = formatear_rut($rut);
             $db = new db($dbhost, $dbuser, $dbpass, $dbname);
 
-            // Verificar si el RUT ya existe
-            $query = "SELECT u_id FROM usuarios WHERE u_rut = ?";
-            $existe = $db->query($query, [$rut])->fetchAll();
+            // Verificar si el RUT o el nombre de usuario ya existen
+            $query = "SELECT u_id FROM usuarios WHERE u_rut = ? OR u_username = ?";
+            $existe = $db->query($query, [$rut, $username])->fetchAll();
             if (count($existe) > 0) {
-                $mensaje = "El RUT ya está registrado.";
+                $mensaje = "El RUT o el nombre de usuario ya está registrado.";
             } else {
                 // Hashear la contraseña
                 $hash = password_hash($password, PASSWORD_DEFAULT);
-                $insert = "INSERT INTO usuarios (u_nombre, u_rut, u_password) VALUES (?, ?, ?)";
-                $db->query($insert, [$nombre, $rut, $hash]);
+                $insert = "INSERT INTO usuarios (u_nombre, u_username, u_rut, u_password) VALUES (?, ?, ?, ?)";
+                $db->query($insert, [$nombre, $username, $rut, $hash]);
                 $mensaje = "Usuario registrado correctamente.";
             }
         } catch (Exception $e) {
@@ -93,6 +94,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <form method="post" class="registro-form" autocomplete="off">
       <label for="nombre">Nombre completo:</label>
       <input type="text" name="nombre" id="nombre" maxlength="80" required>
+
+      <label for="username">Nombre de usuario:</label>
+      <input type="text" name="username" id="username" maxlength="30" required>
 
       <label for="rut">RUT:</label>
       <input type="text" name="rut" id="rut" maxlength="12" required>
