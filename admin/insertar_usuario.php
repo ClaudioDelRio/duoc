@@ -80,7 +80,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <title>Registrar Usuario</title>
     <link rel="stylesheet" href="../assets/css/style.css">
-    
+    <script src="../assets/js/main.js"></script>
 </head>
 <body>
   <div class="registro-container">

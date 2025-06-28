@@ -1202,11 +1202,31 @@ footer {
 }
 .registro-titulo {
   text-align: center;
-  color: $primario-1;
+  color: $secundario-1;
   font-size: 1.5em;
   margin-bottom: 18px;
   font-weight: bold;
   letter-spacing: 0.5px;
+}
+.registro-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.registro-form label {
+  width: 100%;
+  max-width: 320px;
+  box-sizing: border-box;
+}
+.registro-form input {
+  width: 100%;
+  max-width: 320px;
+  box-sizing: border-box;
+}
+.registro-form button {
+  width: 100%;
+  max-width: 320px;
+  box-sizing: border-box;
 }
 .registro-form label {
   color: $primario-4;
@@ -1228,13 +1248,13 @@ footer {
   transition: border 0.2s;
 }
 .registro-form input:focus {
-  border: 1.5px solid $primario-1;
+  border: 1.5px solid $secundario-1;
   outline: none;
 }
 .registro-form button {
   margin-top: 10px;
   width: 100%;
-  background: $primario-1;
+  background: $secundario-1;
   color: #fff;
   border: none;
   padding: 10px 0;
