@@ -48,7 +48,7 @@ $usuarios = $result->fetchAll();
             <table class="admin-table">
                 <thead>
                     <tr>
-                        <th>ID</th>
+                        
                         <th>Nombre</th>
                         <th>Username</th>
                         <th>RUT</th>
@@ -60,7 +60,7 @@ $usuarios = $result->fetchAll();
                     <?php if (!empty($usuarios)): ?>
                         <?php foreach($usuarios as $row): ?>
                             <tr>
-                                <td><?php echo htmlspecialchars($row['u_id']); ?></td>
+                                
                                 <td><?php echo htmlspecialchars($row['u_nombre']); ?></td>
                                 <td><?php echo htmlspecialchars($row['u_username']); ?></td>
                                 <td><?php echo htmlspecialchars($row['u_rut']); ?></td>
