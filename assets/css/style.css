@@ -1346,5 +1346,24 @@ footer {
     text-align: center;
   }
 }
+.btn-editar-usuario {
+  background: #f7f7f7;
+  color: #ee6926;
+  border: 1px solid #ee6926;
+  border-radius: 4px;
+  padding: 6px 10px;
+  font-size: 1.1em;
+  margin-right: 4px;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.btn-editar-usuario:hover {
+  background: #ee6926;
+  color: #fff;
+  border: 1px solid #ee6926;
+}
 
 /*# sourceMappingURL=style.css.map */

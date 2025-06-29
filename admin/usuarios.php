@@ -55,6 +55,7 @@ $usuarios = $result->fetchAll();
                         <th>RUT</th>
                         <th>Creado</th>
                         <th>Actualizado</th>
+                        <th>Acciones</th> <!-- Nueva columna -->
                     </tr>
                 </thead>
                 <tbody>
@@ -67,6 +68,11 @@ $usuarios = $result->fetchAll();
                                 <td><?php echo htmlspecialchars($row['u_rut']); ?></td>
                                 <td><?php echo htmlspecialchars($row['u_created_at']); ?></td>
                                 <td><?php echo htmlspecialchars($row['u_updated_at']); ?></td>
+                                <td>
+                                    <a href="editar_usuario.php?id=<?php echo $row['u_id']; ?>" class="btn-editar-usuario" title="Editar">
+                                        <i class="bi bi-pencil-square"></i>
+                                    </a>
+                                </td>
                             </tr>
                         <?php endforeach; ?>
                     <?php else: ?>
