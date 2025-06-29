@@ -19,7 +19,11 @@ if (!isset($_SESSION['u_id'])) {
 </head>
 <body>
     <header class="admin-header">
-        <h1><i class="bi bi-gear-fill"></i> Administración Family Lunch SpA</h1>
+        <h1><i class="bi bi-gear-fill"></i> Administración Family Lunch SpA
+            <span style="font-size:0.7em; color:#24c261; font-weight:400; margin-left:18px; vertical-align:middle;">
+                <i class="bi bi-person-circle"></i> <?php echo isset($_SESSION['u_nombre']) ? htmlspecialchars($_SESSION['u_nombre']) : 'Usuario'; ?>
+            </span>
+        </h1>
     </header>
     <div class="admin-user-info">
         Bienvenido, <?php echo isset($_SESSION['u_nombre']) ? htmlspecialchars($_SESSION['u_nombre']) : 'Usuario'; ?> |
