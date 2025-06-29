@@ -43,8 +43,9 @@ $usuarios = $result->fetchAll();
         </div>
     </header>
     <main class="main_usuarios">
-        <section>
-            <h2>Listado de Usuarios</h2>
+        <section class="usuarios-header-section">
+            <h2 class="usuarios-header-title">Listado de Usuarios</h2>
+            <a href="insertar_usuario.php" class="btn-orange btn-insertar-usuario">Insertar Usuario</a>
             <table class="admin-table">
                 <thead>
                     <tr>

@@ -67,7 +67,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $hash = password_hash($password, PASSWORD_DEFAULT);
                 $insert = "INSERT INTO usuarios (u_nombre, u_username, u_rut, u_password) VALUES (?, ?, ?, ?)";
                 $db->query($insert, [$nombre, $username, $rut, $hash]);
-                $mensaje = "Usuario registrado correctamente.";
+                header('Location: usuarios.php');
+                exit;
             }
         } catch (Exception $e) {
             $mensaje = "Error: " . $e->getMessage();

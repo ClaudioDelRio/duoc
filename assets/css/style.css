@@ -1299,5 +1299,52 @@ footer {
     font-size: 0.95em;
   }
 }
+.usuarios-header-section {
+  position: relative;
+  margin-bottom: 18px;
+}
+
+.usuarios-header-title {
+  display: inline-block;
+  margin: 0;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #ee6926;
+}
+
+.btn-insertar-usuario {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-top: 2px;
+  background: #6ec2a3;
+  color: #fff;
+  border: 1.5px solid transparent;
+  padding: 8px 18px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  text-decoration: none;
+}
+
+.btn-insertar-usuario:hover {
+  background: #fff;
+  color: #ee6926;
+  border: 1.5px solid #ee6926;
+}
+
+@media (max-width: 600px) {
+  .usuarios-header-section {
+    padding-right: 0;
+  }
+  .btn-insertar-usuario {
+    position: static;
+    display: block;
+    width: 100%;
+    margin: 10px 0 0 0;
+    text-align: center;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
