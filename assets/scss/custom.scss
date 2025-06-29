@@ -1542,3 +1542,15 @@ footer {
   color: #fff;
   border: 1px solid #d9534f;
 }
+// Oculta las columnas de fecha en tablet y móvil
+@media (max-width: 900px) {
+  .admin-table .col-fecha {
+    display: none;
+  }
+}
+// Oculta nombre en celulares
+@media (max-width: 600px) {
+  .admin-table .col-nombre {
+    display: none;
+  }
+}

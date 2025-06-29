@@ -1386,4 +1386,15 @@ footer {
   border: 1px solid #d9534f;
 }
 
+@media (max-width: 900px) {
+  .admin-table .col-fecha {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .admin-table .col-nombre {
+    display: none;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */

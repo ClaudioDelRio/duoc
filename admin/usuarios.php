@@ -50,11 +50,11 @@ $usuarios = $result->fetchAll();
                 <thead>
                     <tr>
                         
-                        <th>Nombre</th>
+                        <th class="col-nombre">Nombre</th>
                         <th>Username</th>
                         <th>RUT</th>
-                        <th>Creado</th>
-                        <th>Actualizado</th>
+                        <th class="col-fecha">Creado</th>
+                        <th class="col-fecha">Actualizado</th>
                         <th>Acciones</th> <!-- Nueva columna -->
                     </tr>
                 </thead>
@@ -63,11 +63,11 @@ $usuarios = $result->fetchAll();
                         <?php foreach($usuarios as $row): ?>
                             <tr>
                                 
-                                <td><?php echo htmlspecialchars($row['u_nombre']); ?></td>
+                                <td class="col-nombre"><?php echo htmlspecialchars($row['u_nombre']); ?></td>
                                 <td><?php echo htmlspecialchars($row['u_username']); ?></td>
                                 <td><?php echo htmlspecialchars($row['u_rut']); ?></td>
-                                <td><?php echo htmlspecialchars($row['u_created_at']); ?></td>
-                                <td><?php echo htmlspecialchars($row['u_updated_at']); ?></td>
+                                <td class="col-fecha"><?php echo htmlspecialchars($row['u_created_at']); ?></td>
+                                <td class="col-fecha"><?php echo htmlspecialchars($row['u_updated_at']); ?></td>
                                 <td>
                                     <a href="editar_usuario.php?id=<?php echo $row['u_id']; ?>" class="btn-editar-usuario" title="Editar">
                                         <i class="bi bi-pencil-square"></i>

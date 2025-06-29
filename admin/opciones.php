@@ -53,9 +53,10 @@ if (!isset($_SESSION['u_id'])) {
                     <h3>Gestión de Pagos</h3>
                     <div class="proximamente">Próximamente</div>
                 </div>
+                
                 <div class="admin-card">
-                    <i class="bi bi-bar-chart-line"></i>
-                    <h3>Reportes y Estadísticas</h3>
+                    <i class="bi bi-person-lines-fill"></i>
+                    <h3>Registro de Clientes</h3>
                     <div class="proximamente">Próximamente</div>
                 </div>
             </div>
