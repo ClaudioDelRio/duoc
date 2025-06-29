@@ -38,10 +38,10 @@ if (!isset($_SESSION['u_id'])) {
     <main>
         <section>
             <div class="admin-cards">
-                <div class="admin-card">
+                <div class="admin-card" onclick="window.location.href='usuarios.php'" style="cursor:pointer;">
                     <i class="bi bi-people-fill"></i>
                     <h3>Gestión de Usuarios</h3>
-                    <div class="proximamente">Próximamente</div>
+                    <div class="proximamente" style="color: #ff6600; font-weight: bold;">Ir a gestión</div>
                 </div>
                 <div class="admin-card">
                     <i class="bi bi-journal-text"></i>
