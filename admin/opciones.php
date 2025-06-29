@@ -19,16 +19,22 @@ if (!isset($_SESSION['u_id'])) {
 </head>
 <body>
     <header class="admin-header">
-        <h1><i class="bi bi-gear-fill"></i> Administración Family Lunch SpA
-            <span style="font-size:0.7em; color:#24c261; font-weight:400; margin-left:18px; vertical-align:middle;">
-                <i class="bi bi-person-circle"></i> <?php echo isset($_SESSION['u_nombre']) ? htmlspecialchars($_SESSION['u_nombre']) : 'Usuario'; ?>
-            </span>
+        <h1 class="admin-title">
+            <i class="bi bi-gear-fill"></i> Administración Family Lunch SpA
         </h1>
+        <div class="admin-user-bar">
+            <span class="admin-user-welcome">
+                <i class="bi bi-person-circle"></i> Bienvenido,
+            </span>
+            <span class="admin-user-name">
+                <?php echo isset($_SESSION['u_nombre']) ? htmlspecialchars($_SESSION['u_nombre']) : 'Usuario'; ?>
+            </span>
+            <button onclick="window.location.href='../clases/cerrar_sesion.php'" class="btn-orange admin-logout-btn">
+                <i class="bi bi-box-arrow-right"></i> Cerrar Sesión
+            </button>
+        </div>
     </header>
-    <div class="admin-user-info">
-        Bienvenido, <?php echo isset($_SESSION['u_nombre']) ? htmlspecialchars($_SESSION['u_nombre']) : 'Usuario'; ?> |
-        <a href="../clases/logout.php" style="color:#ee6926;text-decoration:none;font-weight:bold;">Cerrar Sesión <i class="bi bi-box-arrow-right"></i></a>
-    </div>
+   
     <main>
         <section>
             <div class="admin-cards">

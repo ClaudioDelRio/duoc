@@ -793,6 +793,7 @@ footer {
   .footer-content{
     margin-left: 15px;
   }
+  
 }
 
 // =============================
@@ -1286,24 +1287,45 @@ footer {
   padding: 18px 0 10px 0;
   text-align: center;
 }
-.admin-header h1 {
+.admin-title {
   color: $primario-2;
   font-size: 2em;
   margin: 0;
   font-family: 'Roboto', Arial, sans-serif;
 }
-.admin-user-info {
-  text-align: right;
-  padding: 0 30px 10px 0;
-  color: $primario-3;
-  font-weight: 500;
+.admin-user-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
+.admin-user-welcome {
+  font-size: 1em;
+  color: $primario-3;
+  font-weight: 400;
+}
+.admin-user-name {
+  font-size: 1em;
+  color: $primario-2;
+  font-weight: bold;
+}
+.admin-logout-btn {
+  font-size: 1em;
+  padding: 8px 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+// Cards
 .admin-cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
-  margin: 40px 0 0 0;
+  margin: 150px 0 0 0; 
 }
 .admin-card {
   background: #fff;
@@ -1342,9 +1364,49 @@ footer {
   padding: 18px 0 10px 0;
   margin-top: 60px;
 }
-@media (max-width: 900px) {
+// Tablet: 2 columnas cards, user bar debajo del título
+@media (min-width: 601px) and (max-width: 900px) {
+  .admin-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    justify-items: center;
+    align-items: stretch;
+    margin-top: 200px;
+  }
+  .admin-card {
+    width: 100%;
+    max-width: 400px;
+  }
+  .admin-header {
+    text-align: center;
+  }
+  .admin-user-bar {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    gap: 6px;
+  }
+  
+}
+// Celular: 1 columna cards, user bar debajo del título
+@media (max-width: 600px) {
   .admin-cards {
     flex-direction: column;
     align-items: center;
+    display: flex;
+    margin-top: 345px;
+  }
+  main {
+    margin-top: 80px; // Baja todo el main solo en celulares
+  }
+  .admin-header {
+    text-align: center;
+  }
+  .admin-user-bar {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    gap: 6px;
   }
 }
