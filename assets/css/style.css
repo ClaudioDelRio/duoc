@@ -1111,4 +1111,82 @@ footer {
   color: #2ac558;
 }
 
+.admin-header {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  padding: 18px 0 10px 0;
+  text-align: center;
+}
+
+.admin-header h1 {
+  color: #ee6926;
+  font-size: 2em;
+  margin: 0;
+  font-family: "Roboto", Arial, sans-serif;
+}
+
+.admin-user-info {
+  text-align: right;
+  padding: 0 30px 10px 0;
+  color: #24c261;
+  font-weight: 500;
+}
+
+.admin-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin: 40px 0 0 0;
+}
+
+.admin-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.0666666667);
+  width: 260px;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 18px 22px 18px;
+  text-align: center;
+  position: relative;
+}
+
+.admin-card .bi {
+  font-size: 2.5em;
+  color: #ee6926;
+  margin-bottom: 18px;
+}
+
+.admin-card h3 {
+  color: #2ac558;
+  margin-bottom: 8px;
+  font-size: 1.2em;
+}
+
+.admin-card .proximamente {
+  color: #999;
+  font-size: 1em;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+.admin-footer {
+  background: #232b39;
+  color: #fff;
+  text-align: center;
+  padding: 18px 0 10px 0;
+  margin-top: 60px;
+}
+
+@media (max-width: 900px) {
+  .admin-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
