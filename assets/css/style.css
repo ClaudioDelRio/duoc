@@ -1366,4 +1366,24 @@ footer {
   border: 1px solid #ee6926;
 }
 
+.btn-eliminar-usuario {
+  background: #fff;
+  color: #d9534f;
+  border: 1px solid #d9534f;
+  border-radius: 4px;
+  padding: 6px 10px;
+  font-size: 1.1em;
+  margin-left: 4px;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.btn-eliminar-usuario:hover {
+  background: #d9534f;
+  color: #fff;
+  border: 1px solid #d9534f;
+}
+
 /*# sourceMappingURL=style.css.map */

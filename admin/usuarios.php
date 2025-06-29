@@ -72,6 +72,10 @@ $usuarios = $result->fetchAll();
                                     <a href="editar_usuario.php?id=<?php echo $row['u_id']; ?>" class="btn-editar-usuario" title="Editar">
                                         <i class="bi bi-pencil-square"></i>
                                     </a>
+                                    <a href="eliminar_usuario.php?id=<?php echo $row['u_id']; ?>" class="btn-eliminar-usuario" title="Eliminar"
+                                       onclick="return confirm('¿Estás seguro de que deseas eliminar este usuario?');">
+                                        <i class="bi bi-trash"></i>
+                                    </a>
                                 </td>
                             </tr>
                         <?php endforeach; ?>
