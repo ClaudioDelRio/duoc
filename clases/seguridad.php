@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
    
     // Si llegamos aquí, la autenticación falló
-    header('Location: ../admin/login.php?error=1');
+    header('Location: ../index.php?login_error=1');
     exit();
 } else {
     // Si no es una petición POST, redirigir a login

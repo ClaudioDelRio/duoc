@@ -45,6 +45,9 @@
         }
       ?>
       <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
+      <?php if (isset($_GET['login_error'])): ?>
+        <div style="color: red; margin-bottom: 10px;">Usuario o contraseña incorrecta</div>
+      <?php endif; ?>
       <button type="submit" class="btn-orange">Ingresar</button>
     </form>
   </div>
@@ -67,6 +70,10 @@ window.addEventListener('click', function(event) {
     modalLogin.style.display = 'none';
   }
 });
+// Abrir modal automáticamente si hay error de login
+if (window.location.search.includes('login_error=1')) {
+  modalLogin.style.display = 'block';
+}
 </script>
 
 <style>
