@@ -18,7 +18,7 @@
             </nav>
             <div class="btns">
                 <button class="btn-orange" id="abrirModalLogin">Administración</button>
-                <button class="btn-green">Pedir Online</button>
+                <button class="btn-green">Registrate</button>
             </div>
 </div>
 
