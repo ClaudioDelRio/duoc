@@ -18,7 +18,13 @@
             </nav>
             <div class="btns">
                 <button class="btn-orange" id="abrirModalLogin">Administración</button>
-                <button class="btn-green">Clientes</button>
+                <a href="clientes/registro.php" class="btn-green" style="text-decoration:none;">Clientes</a>
+                <?php 
+                if (session_status() === PHP_SESSION_NONE) session_start();
+                if (isset($_SESSION['cliente_nombre'])): ?>
+                    <span style="margin-left:15px; color:#2ac558; font-weight:bold;">Bienvenido, <?php echo htmlspecialchars($_SESSION['cliente_nombre']); ?></span>
+                    <a href="clientes/cerrar_sesion.php" class="btn-green" style="margin-left:10px; background:#ee6926; color:#fff; border:none; padding:8px 14px; border-radius:4px; font-weight:bold; text-decoration:none;">Cerrar sesión</a>
+                <?php endif; ?>
             </div>
 </div>
 
