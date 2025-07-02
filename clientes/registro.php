@@ -17,9 +17,10 @@ if (isset($_SESSION['login_error'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro de Clientes | Family Lunch SpA</title>
+     <!-- Estilos personalizados -->
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-    <!-- Los estilos de registro de clientes están en custom.scss/style.css -->
+   
 </head>
 <body>
     <div class="registro-container">
@@ -52,30 +53,6 @@ if (isset($_SESSION['login_error'])) {
             <button type="button" id="switch-btn">Iniciar Sesión</button>
         </div>
     </div>
-    <script>
-        // Alternar entre registro y login
-        const formRegistro = document.getElementById('form-registro');
-        const formLogin = document.getElementById('form-login');
-        const switchBtn = document.getElementById('switch-btn');
-        const switchText = document.getElementById('switch-text');
-        const tituloForm = document.getElementById('titulo-form');
-        let mostrandoRegistro = true;
-        switchBtn.addEventListener('click', function() {
-            mostrandoRegistro = !mostrandoRegistro;
-            if (mostrandoRegistro) {
-                formRegistro.style.display = 'block';
-                formLogin.style.display = 'none';
-                switchBtn.textContent = 'Iniciar Sesión';
-                switchText.textContent = '¿Ya tienes cuenta?';
-                tituloForm.textContent = 'Registro de Cliente';
-            } else {
-                formRegistro.style.display = 'none';
-                formLogin.style.display = 'block';
-                switchBtn.textContent = 'Registrarse';
-                switchText.textContent = '¿No tienes cuenta?';
-                tituloForm.textContent = 'Iniciar Sesión';
-            }
-        });
-    </script>
+    <script src="../assets/js/registro-clientes.js"></script>
 </body>
 </html>
