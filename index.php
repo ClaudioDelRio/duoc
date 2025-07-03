@@ -1,3 +1,6 @@
+<?php
+if (session_status() === PHP_SESSION_NONE) session_start();
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -12,13 +15,20 @@
 </head>
 <body>
     <header>
-      <?php  require_once 'header.php'; ?>
+      <?php  include_once 'header.php'; ?>
         
     </header>
 
     <main>
         <section class="hero" id="hero">
-            <h1>Bienvenidos a Family Lunch Spa</h1>
+            <h1>
+                Bienvenidos a Family Lunch Spa
+                <?php if (isset($_SESSION['cliente_nombre'])): ?>
+                    <span class="bienvenida-cliente">
+                        | Bienvenido, <?php echo htmlspecialchars($_SESSION['cliente_nombre']); ?>
+                    </span>
+                <?php endif; ?>
+            </h1>
             <p>Donde cada comida se convierte en una experiencia familiar inolvidable. Disfruta de nuestra gastronomía en un ambiente pensado para toda la familia.</p>
             <div class="reserva-rapida">
                 <h2 class="titulo-reserva">Reserva Rápida</h2>

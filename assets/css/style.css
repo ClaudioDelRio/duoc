@@ -1417,4 +1417,12 @@ footer {
   background: #e65c00;
 }
 
+.bienvenida-cliente {
+  font-size: 22px;
+  color: #6ec2a3;
+  margin-left: 20px;
+  font-weight: bold;
+  text-shadow: 0 1px 4px rgba(5, 5, 5, 0.533), 0 0px 1px rgba(30, 28, 28, 0.4);
+}
+
 /*# sourceMappingURL=style.css.map */

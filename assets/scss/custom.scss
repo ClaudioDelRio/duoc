@@ -1573,3 +1573,12 @@ footer {
 .switch-link:hover {
     background: #e65c00;
 }
+// =============================
+// Estilos para la página de bienvenida del cliente
+.bienvenida-cliente {
+    font-size: 22px;
+    color: $secundario-1;
+    margin-left: 20px;
+    font-weight: bold;
+    text-shadow: 0 1px 4px rgba(5, 5, 5, 0.533), 0 0px 1px rgba(30, 28, 28, 0.4);
+}
