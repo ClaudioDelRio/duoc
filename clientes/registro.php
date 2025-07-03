@@ -50,7 +50,7 @@ if (isset($_SESSION['login_error'])) {
         </form>
         <div class="registro-switch">
             <span id="switch-text">¿Ya tienes cuenta?</span>
-            <button type="button" id="switch-btn">Iniciar Sesión</button>
+            <a href="#" id="switch-btn" class="switch-link">Iniciar Sesión</a>
         </div>
     </div>
     <script src="../assets/js/registro-clientes.js"></script>

@@ -1396,5 +1396,25 @@ footer {
     display: none;
   }
 }
+.registro-switch {
+  margin-top: 2em;
+}
+
+.switch-link {
+  display: inline-block;
+  padding: 8px 18px;
+  background: #ff6600;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.switch-link:hover {
+  background: #e65c00;
+}
 
 /*# sourceMappingURL=style.css.map */
