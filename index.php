@@ -44,46 +44,76 @@ if (session_status() === PHP_SESSION_NONE) session_start();
         <section class="section" id="section-menu">
             <div class="section-title">Destacados del Menú</div>
             <div class="section-desc">Descubre nuestras especialidades más populares</div>
+            <?php
+            // Conexión a la base de datos para destacados
+            require_once __DIR__ . '/clases/config.php';
+            require_once __DIR__ . '/clases/db.php';
+
+            $db = new db($dbhost, $dbuser, $dbpass, $dbname);
+
+            // Consultar los platos destacados
+            $destacados = [
+                'especialidad' => null,
+                'mas_vendido' => null,
+                'infantil' => null
+            ];
+
+            // Especialidad
+            $res = $db->query("SELECT * FROM menus WHERE me_especialidad = 1 LIMIT 1")->fetchAll();
+            if (count($res) > 0) $destacados['especialidad'] = $res[0];
+            // Más vendido
+            $res = $db->query("SELECT * FROM menus WHERE me_mas_vendido = 1 LIMIT 1")->fetchAll();
+            if (count($res) > 0) $destacados['mas_vendido'] = $res[0];
+            // Infantil
+            $res = $db->query("SELECT * FROM menus WHERE me_infantil = 1 LIMIT 1")->fetchAll();
+            if (count($res) > 0) $destacados['infantil'] = $res[0];
+            ?>
             <div class="menu-destacados">
+                <?php if ($destacados['especialidad']): ?>
                 <article class="menu-card">
                     <figure>
-                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80" alt="Paella Familiar">
-                        <figcaption>Paella Familiar</figcaption>
+                        <img src="<?php echo htmlspecialchars($destacados['especialidad']['me_imagen']); ?>" alt="<?php echo htmlspecialchars($destacados['especialidad']['me_menu']); ?>">
+                        <figcaption><?php echo htmlspecialchars($destacados['especialidad']['me_menu']); ?></figcaption>
                     </figure>
                     <div class="info">
                         <div class="etiqueta">Especialidad</div>
-                        <h3>Paella Familiar</h3>
-                        <p>Nuestra tradicional paella española con mariscos frescos, perfecta para compartir en familia.</p>
-                        <div class="precio">$28.90</div>
+                        <h3><?php echo htmlspecialchars($destacados['especialidad']['me_menu']); ?></h3>
+                        <p><?php echo htmlspecialchars($destacados['especialidad']['me_resena']); ?></p>
+                        <div class="precio">$<?php echo number_format($destacados['especialidad']['me_valor'], 0, ',', '.'); ?></div>
                         <button class="btn-detalles">Ver Detalles</button>
                     </div>
                 </article>
+                <?php endif; ?>
+                <?php if ($destacados['mas_vendido']): ?>
                 <article class="menu-card">
                     <figure>
-                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80" alt="Tabla de Carnes Mixtas">
-                        <figcaption>Tabla de Carnes Mixtas</figcaption>
+                        <img src="<?php echo htmlspecialchars($destacados['mas_vendido']['me_imagen']); ?>" alt="<?php echo htmlspecialchars($destacados['mas_vendido']['me_menu']); ?>">
+                        <figcaption><?php echo htmlspecialchars($destacados['mas_vendido']['me_menu']); ?></figcaption>
                     </figure>
                     <div class="info">
                         <div class="destacado">Más Vendido</div>
-                        <h3>Tabla de Carnes Mixtas</h3>
-                        <p>Selección de los mejores cortes de carne a la parrilla con guarniciones para compartir.</p>
-                        <div class="precio">$32.50</div>
+                        <h3><?php echo htmlspecialchars($destacados['mas_vendido']['me_menu']); ?></h3>
+                        <p><?php echo htmlspecialchars($destacados['mas_vendido']['me_resena']); ?></p>
+                        <div class="precio">$<?php echo number_format($destacados['mas_vendido']['me_valor'], 0, ',', '.'); ?></div>
                         <button class="btn-detalles">Ver Detalles</button>
                     </div>
                 </article>
+                <?php endif; ?>
+                <?php if ($destacados['infantil']): ?>
                 <article class="menu-card">
                     <figure>
-                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80" alt="Pasta Casera">
-                        <figcaption>Pasta Casera</figcaption>
+                        <img src="<?php echo htmlspecialchars($destacados['infantil']['me_imagen']); ?>" alt="<?php echo htmlspecialchars($destacados['infantil']['me_menu']); ?>">
+                        <figcaption><?php echo htmlspecialchars($destacados['infantil']['me_menu']); ?></figcaption>
                     </figure>
                     <div class="info">
                         <div class="favorito">Favorito Infantil</div>
-                        <h3>Pasta Casera</h3>
-                        <p>Pasta elaborada artesanalmente con salsa de tomates orgánicos y albahaca fresca.</p>
-                        <div class="precio">$18.50</div>
+                        <h3><?php echo htmlspecialchars($destacados['infantil']['me_menu']); ?></h3>
+                        <p><?php echo htmlspecialchars($destacados['infantil']['me_resena']); ?></p>
+                        <div class="precio">$<?php echo number_format($destacados['infantil']['me_valor'], 0, ',', '.'); ?></div>
                         <button class="btn-detalles">Ver Detalles</button>
                     </div>
                 </article>
+                <?php endif; ?>
             </div>
             <button class="btn-menu-completo">Ver Menú Completo</button>
         </section>
