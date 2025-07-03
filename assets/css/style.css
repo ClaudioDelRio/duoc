@@ -178,14 +178,20 @@ header {
 
 .section-title {
   text-align: center;
-  font-size: 2em;
+  font-size: 2.3em;
   margin-bottom: 10px;
+  color: #ee6926;
 }
 
 .section-desc {
   text-align: center;
-  color: black;
   margin-bottom: 30px;
+  color: #ee6926;
+  font-size: 2.1em;
+}
+
+.section#section-menu-completo {
+  padding-top: 140px;
 }
 
 .menu-destacados {
@@ -1423,6 +1429,21 @@ footer {
   margin-left: 20px;
   font-weight: bold;
   text-shadow: 0 1px 4px rgba(5, 5, 5, 0.533), 0 0px 1px rgba(30, 28, 28, 0.4);
+}
+
+.menu-completo-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 900px) {
+  .menu-completo-list {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

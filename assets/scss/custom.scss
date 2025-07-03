@@ -223,15 +223,20 @@ header {
 // Título de sección centrado.
 .section-title {
   text-align: center;
-  font-size: 2em;
+  font-size: 2.3em;
   margin-bottom: 10px;
+  color: $primario-2;
 }
 
 // Descripción de sección centrada.
 .section-desc {
   text-align: center;
-  color: black;
   margin-bottom: 30px;
+  color: $primario-2;
+  font-size: 2.1em;
+}
+.section#section-menu-completo{
+  padding-top: 140px;
 }
 
 // =============================
@@ -1582,3 +1587,23 @@ footer {
     font-weight: bold;
     text-shadow: 0 1px 4px rgba(5, 5, 5, 0.533), 0 0px 1px rgba(30, 28, 28, 0.4);
 }
+
+// =============================
+// Estilos para menú completo
+// =============================
+.menu-completo-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+@media (max-width: 900px) {
+  .menu-completo-list {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+// =============================
+// Fin estilos menú completo
+// =============================

@@ -115,7 +115,7 @@ if (session_status() === PHP_SESSION_NONE) session_start();
                 </article>
                 <?php endif; ?>
             </div>
-            <button class="btn-menu-completo">Ver Menú Completo</button>
+            <button class="btn-menu-completo" onclick="window.location.href='menu_completo.php'">Ver Menú Completo</button>
         </section>
 
         <section class="section experiencia" id="experiencia">
