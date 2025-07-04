@@ -48,16 +48,16 @@ if (!isset($_SESSION['u_id'])) {
                     <h3>Gestión de Pedidos</h3>
                     <div class="proximamente">Próximamente</div>
                 </div>
-                <div class="admin-card">
-                    <i class="bi bi-cash-coin"></i>
-                    <h3>Gestión de Pagos</h3>
-                    <div class="proximamente">Próximamente</div>
-                </div>
-                
+                                
                 <div class="admin-card">
                     <i class="bi bi-person-lines-fill"></i>
                     <h3>Registro de Clientes</h3>
                     <div class="proximamente">Próximamente</div>
+                </div>
+                <div class="admin-card" onclick="window.location.href='gestion_menu.php'" style="cursor:pointer;">
+                    <i class="bi bi-list-ul"></i>
+                    <h3>Gestión de Menús</h3>
+                    <div class="proximamente" style="color: #ff6600; font-weight: bold;">Ir a gestión</div>
                 </div>
             </div>
         </section>

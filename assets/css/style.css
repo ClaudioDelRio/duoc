@@ -191,7 +191,7 @@ header {
 }
 
 .section#section-menu-completo {
-  padding-top: 140px;
+  padding-top: 120px;
 }
 
 .menu-destacados {
@@ -248,9 +248,11 @@ header {
 }
 
 .menu-card .precio {
-  font-size: 1.1em;
+  font-size: 1.5em;
   font-weight: bold;
+  margin-top: 15px;
   margin-bottom: 10px;
+  text-align: right;
 }
 
 .menu-card .btn-detalles {

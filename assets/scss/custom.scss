@@ -303,9 +303,11 @@ header {
 
 // Precio del plato.
 .menu-card .precio {
-  font-size: 1.1em;
+  font-size: 1.5em;
   font-weight: bold;
+  margin-top: 15px;
   margin-bottom: 10px;
+  text-align: right;
 }
 
 // Botón de detalles del plato.
