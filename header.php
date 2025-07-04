@@ -3,8 +3,10 @@ if (session_status() === PHP_SESSION_NONE) session_start();
 ?>
 <div class="navbar">
             <div class="logo">
-                <img src="assets/img/logo.png" alt="Logo Family Lunch Spa" class="logo-img">
-                Family Lunch SpA</span>
+                <a href="index.php" style="text-decoration:none; color:inherit; display:flex; align-items:center;">
+                    <img src="assets/img/logo.png" alt="Logo Family Lunch Spa" class="logo-img">
+                    <span style="margin-left:8px;">Family Lunch SpA</span>
+                </a>
             </div>
             <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox" hidden>
             <label for="menu-toggle" class="menu-toggle" aria-label="Abrir menú">
