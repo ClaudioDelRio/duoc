@@ -20,40 +20,6 @@ if (!$menu) {
     header('Location: gestion_menu.php');
     exit;
 }
-
-// Si se envió el formulario
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $me_menu = trim($_POST['me_menu']);
-    $me_mas_vendido = isset($_POST['me_mas_vendido']) ? 1 : 0;
-    $me_infantil = isset($_POST['me_infantil']) ? 1 : 0;
-    $me_especialidad = isset($_POST['me_especialidad']) ? 1 : 0;
-    $me_resena = trim($_POST['me_resena']);
-    $me_valor = intval($_POST['me_valor']);
-
-    // Manejo de imagen
-    $me_imagen = $menu['me_imagen'];
-    if (isset($_FILES['me_imagen']) && $_FILES['me_imagen']['error'] === UPLOAD_ERR_OK) {
-        $ext = pathinfo($_FILES['me_imagen']['name'], PATHINFO_EXTENSION);
-        $nombre_archivo = 'menu_' . $id . '_' . time() . '.' . $ext;
-        $ruta_destino = '../assets/img/menus/' . $nombre_archivo;
-
-        // Crear carpeta si no existe
-        if (!is_dir('../assets/img/menus/')) {
-            mkdir('../assets/img/menus/', 0777, true);
-        }
-
-        if (move_uploaded_file($_FILES['me_imagen']['tmp_name'], $ruta_destino)) {
-            $me_imagen = 'assets/img/menus/' . $nombre_archivo;
-        }
-    }
-
-    // Actualizar menú
-    $sql = "UPDATE menus SET me_menu=?, me_mas_vendido=?, me_infantil=?, me_especialidad=?, me_resena=?, me_valor=?, me_imagen=? WHERE me_id=?";
-    $db->query($sql, [$me_menu, $me_mas_vendido, $me_infantil, $me_especialidad, $me_resena, $me_valor, $me_imagen, $id]);
-
-    header("Location: gestion_menu.php");
-    exit;
-}
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -61,7 +27,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <title>Editar Menú</title>
     <link rel="stylesheet" href="../assets/css/style.css">
-   
 </head>
 <body>
     <div class="menu-edit-container">
@@ -69,7 +34,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <i class="bi bi-arrow-left-circle"></i>
         </a>
         <h2 class="menu-edit-title">Editar Menú</h2>
-        <form method="POST" class="menu-edit-form" enctype="multipart/form-data">
+        <form method="POST" class="menu-edit-form" enctype="multipart/form-data" action="editar_menu_proceso.php">
+            <input type="hidden" name="id" value="<?php echo $id; ?>">
             <label for="me_menu">Nombre Menú:</label>
             <input type="text" name="me_menu" id="me_menu" value="<?php echo htmlspecialchars($menu['me_menu']); ?>" required>
 
