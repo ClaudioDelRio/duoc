@@ -491,6 +491,22 @@ header {
 .testimonios-vermas {
   text-align: center;
   margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+  .testimonios-vermas {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  .testimonios-vermas button {
+    width: 100%;
+    max-width: 320px;
+  }
 }
 
 // Botón para ver más testimonios.
@@ -1706,5 +1722,78 @@ footer {
 }
 .btn-back:hover {
     color: #2ac558;
+}
+// =============================
+// Estilos para el formulario de testimonio
+// =============================
+.section-testimonio-form {
+  background: #fff;
+  padding: 40px 0;
+}
+.testimonio-form-container {
+  max-width: 400px;
+  margin: 0 auto;
+  background: $destacado-2;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px #0001;
+  padding: 30px 24px 24px 24px;
+}
+.form-testimonio label {
+  color: $primario-2;
+  font-weight: 500;
+  margin-bottom: 2px;
+  display: block;
+  margin-top: 10px;
+}
+.form-testimonio input[type="text"],
+.form-testimonio textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  border-radius: 4px;
+  border: 1.5px solid $primario-4;
+  margin-bottom: 12px;
+  font-size: 1em;
+  background: #fff;
+  color: #222;
+  transition: border 0.2s;
+}
+.form-testimonio textarea {
+  resize: none;
+  min-height: 90px;
+  max-height: 150px;
+  height: 110px;
+}
+.form-testimonio input[type="text"]:focus,
+.form-testimonio textarea:focus {
+  border: 1.5px solid $primario-2;
+  outline: none;
+}
+.btn-enviar-testimonio {
+  background: $primario-2;
+  color: #fff;
+  border: 1.5px solid transparent;
+  padding: 10px 0;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+}
+.btn-enviar-testimonio:hover {
+  background: #fff;
+  color: $primario-2;
+  border: 1.5px solid $primario-2;
+}
+.testimonio-form-mensaje {
+  background: #d4edda;
+  color: #155724;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: bold;
 }
 

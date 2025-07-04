@@ -175,6 +175,9 @@ if (session_status() === PHP_SESSION_NONE) session_start();
             </div>
             <div class="testimonios-vermas">
                 <button class="btn-menu-completo btn-ver-mas-testimonios">Ver Más Testimonios</button>
+                <?php if (isset($_SESSION['cliente_nombre'])): ?>
+                    <a href="./clientes/insertar_testimonio.php" class="btn-menu-completo btn-agregar-testimonio">Agregar Testimonio</a>
+                <?php endif; ?>
             </div>
         </section>
 
