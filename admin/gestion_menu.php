@@ -26,7 +26,10 @@ $menus = $result->fetchAll();
 </head>
 <body class="admin-body">
     <header class="admin-header">
-        <h1 class="admin-title">
+        <a href="opciones.php" class="btn-back" title="Volver a opciones">
+            <i class="bi bi-arrow-left-circle"></i>
+        </a>
+        <h1 class="admin-title" style="display:inline;">
             <i class="bi bi-list-ul"></i> Gestión de Menús
         </h1>
         <div class="admin-user-bar">

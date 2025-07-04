@@ -1447,5 +1447,19 @@ footer {
     align-items: center;
   }
 }
+.btn-back {
+  color: #ee6926;
+  font-size: 2rem;
+  vertical-align: middle;
+  display: inline-block;
+  margin-right: 2.5em;
+  transition: color 0.2s, transform 0.2s;
+  text-decoration: none;
+}
+.btn-back:hover {
+  color: #2ac558;
+  transform: scale(1.08);
+  text-decoration: none;
+}
 
 /*# sourceMappingURL=style.css.map */

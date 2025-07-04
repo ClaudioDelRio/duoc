@@ -1607,5 +1607,21 @@ footer {
   }
 }
 // =============================
-// Fin estilos menú completo
+// Estilos para el botón de volver atrás
 // =============================
+.btn-back {
+    color: $primario-2;
+    font-size: 2rem;
+    vertical-align: middle;
+    display: inline-block;
+    margin-right: 2.5em;
+    transition: color 0.2s, transform 0.2s;
+    text-decoration: none;
+
+    &:hover {
+        color: $primario-1;
+        transform: scale(1.08);
+        text-decoration: none;
+    }
+}
+
