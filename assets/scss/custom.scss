@@ -1821,3 +1821,42 @@ footer {
   font-weight: bold;
 }
 
+// Cambia el color de las flechas del carrusel de testimonios
+#carouselTestimonios .carousel-control-prev-icon,
+#carouselTestimonios .carousel-control-next-icon {
+  filter: none;
+  background-image: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: $primario-2;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+#carouselTestimonios .carousel-control-prev-icon::after {
+  content: '';
+  display: block;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-top: 0.25rem solid #fff;
+  border-left: 0.25rem solid #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+#carouselTestimonios .carousel-control-next-icon::after {
+  content: '';
+  display: block;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-top: 0.25rem solid #fff;
+  border-right: 0.25rem solid #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+

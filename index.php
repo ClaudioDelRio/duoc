@@ -226,7 +226,7 @@ if (session_status() === PHP_SESSION_NONE) session_start();
             <p>Reserva ahora y disfruta de momentos inolvidables con tu familia en un ambiente diseñado para el disfrute de todos.</p>
             <div class="cta-btns">
                 <button>Reservar Mesa</button>
-                <a onclick="window.location.href='menu_completo.php'">Ver Menú</a>
+                
             </div>
         </section>
     </main>
