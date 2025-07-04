@@ -487,6 +487,30 @@ header {
   margin-bottom: 6px;
 }
 
+// Agrupa los testimonios en fila de a 3 en escritorio/tablet y 1 en móvil
+.testimonios-group {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}
+
+@media (max-width: 900px) {
+  .testimonios-group {
+    gap: 12px;
+  }
+}
+@media (max-width: 600px) {
+  .testimonios-group {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+  .testimonios-group .testimonio {
+    width: 100%;
+    margin-bottom: 12px;
+  }
+}
+
 // Contenedor para el botón de ver más testimonios.
 .testimonios-vermas {
   text-align: center;

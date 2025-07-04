@@ -9,6 +9,8 @@ if (session_status() === PHP_SESSION_NONE) session_start();
     <title>Family Lunch SpA</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
@@ -159,19 +161,57 @@ if (session_status() === PHP_SESSION_NONE) session_start();
         <section class="testimonios">
             <div class="testimonios-title">Lo que dicen nuestros clientes</div>
             <div class="testimonios-desc">Experiencias reales de familias que nos han visitado</div>
-            <div class="testimonios-list">
-                <article class="testimonio">
-                    <div class="nombre">Carolina Méndez</div>
-                    <p>“La zona infantil es increíble. Por primera vez pudimos disfrutar de una comida tranquila mientras nuestros hijos se divertían. La comida deliciosa y el personal muy atento con toda la familia.”</p>
-                </article>
-                <article class="testimonio">
-                    <div class="nombre">Roberto Sanchez</div>
-                    <p>“Celebramos el cumpleaños de mi nieto y fue perfecto. La organización, la comida y la atención superaron nuestras expectativas. Todos, desde los más pequeños hasta los abuelos, disfrutamos muchísimo.”</p>
-                </article>
-                <article class="testimonio">
-                    <div class="nombre">Familia Rodríguez</div>
-                    <p>“Primera salida con nuestro bebé y fue una experiencia maravillosa. El restaurante cuenta con todas las facilidades para familias con niños pequeños. La comida exquisita y el ambiente muy ameno.”</p>
-                </article>
+            <div class="testimonios-carousel-wrapper" style="display: flex; justify-content: center;">
+                <div id="carouselTestimonios" class="carousel slide" data-bs-ride="carousel" style="width: 100%; max-width: 900px;">
+                    <div class="carousel-inner">
+                    <?php
+                    // Mostrar testimonios reales desde la base de datos
+                    require_once __DIR__ . '/clases/config.php';
+                    require_once __DIR__ . '/clases/db.php';
+                    $db = new db($dbhost, $dbuser, $dbpass, $dbname);
+                    $testimonios = $db->query('SELECT t.t_testimonio, rc.rc_nombre FROM testimonios t JOIN registro_clientes rc ON t.t_rc_id = rc.rc_id ORDER BY t.t_id DESC LIMIT 12')->fetchAll();
+                    if ($testimonios && count($testimonios) > 0):
+                        $active = 'active';
+                        for ($i = 0; $i < count($testimonios); $i += 3): ?>
+                            <div class="carousel-item <?php echo $active; ?>">
+                                <div class="testimonios-group">
+                                <?php for ($j = $i; $j < $i + 3 && $j < count($testimonios); $j++): ?>
+                                    <article class="testimonio">
+                                        <div class="nombre"><?php echo htmlspecialchars($testimonios[$j]['rc_nombre']); ?></div>
+                                        <p><?php echo htmlspecialchars($testimonios[$j]['t_testimonio']); ?></p>
+                                    </article>
+                                <?php endfor; ?>
+                                </div>
+                            </div>
+                    <?php $active = ''; endfor;
+                    else: ?>
+                        <div class="carousel-item active">
+                            <div class="testimonios-group">
+                                <article class="testimonio">
+                                    <div class="nombre">Carolina Méndez</div>
+                                    <p>“La zona infantil es increíble. Por primera vez pudimos disfrutar de una comida tranquila mientras nuestros hijos se divertían. La comida deliciosa y el personal muy atento con toda la familia.”</p>
+                                </article>
+                                <article class="testimonio">
+                                    <div class="nombre">Roberto Sanchez</div>
+                                    <p>“Celebramos el cumpleaños de mi nieto y fue perfecto. La organización, la comida y la atención superaron nuestras expectativas. Todos, desde los más pequeños hasta los abuelos, disfrutamos muchísimo.”</p>
+                                </article>
+                                <article class="testimonio">
+                                    <div class="nombre">Familia Rodríguez</div>
+                                    <p>“Primera salida con nuestro bebé y fue una experiencia maravillosa. El restaurante cuenta con todas las facilidades para familias con niños pequeños. La comida exquisita y el ambiente muy ameno.”</p>
+                                </article>
+                            </div>
+                        </div>
+                    <?php endif; ?>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselTestimonios" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselTestimonios" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Siguiente</span>
+                    </button>
+                </div>
             </div>
             <div class="testimonios-vermas">
                 <button class="btn-menu-completo btn-ver-mas-testimonios">Ver Más Testimonios</button>
@@ -251,5 +291,7 @@ if (session_status() === PHP_SESSION_NONE) session_start();
     </a>
 
         <script src="assets/js/modal-contacto.js"></script>
+        <!-- Bootstrap JS CDN -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

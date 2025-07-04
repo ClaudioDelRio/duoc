@@ -403,6 +403,28 @@ header {
   margin-bottom: 6px;
 }
 
+.testimonios-group {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}
+
+@media (max-width: 900px) {
+  .testimonios-group {
+    gap: 12px;
+  }
+}
+@media (max-width: 600px) {
+  .testimonios-group {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+  .testimonios-group .testimonio {
+    width: 100%;
+    margin-bottom: 12px;
+  }
+}
 .testimonios-vermas {
   text-align: center;
   margin-top: 30px;
