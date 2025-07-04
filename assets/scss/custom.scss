@@ -1624,4 +1624,86 @@ footer {
         text-decoration: none;
     }
 }
-
+// =============================
+// Estilos para el formulario de edición de menú
+.menu-edit-container {
+    max-width: 420px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px #ee69262a;
+    padding: 32px 28px 24px 28px;
+    border: 2px solid #ee6926;
+}
+.menu-edit-title {
+    color: #ee6926;
+    text-align: center;
+    margin-bottom: 18px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.menu-edit-form label {
+    display: block;
+    margin-bottom: 6px;
+    color: #ee6926;
+    font-weight: 500;
+}
+.menu-edit-form input[type="text"],
+.menu-edit-form input[type="number"],
+.menu-edit-form textarea {
+    width: 100%;
+    padding: 8px 10px;
+    margin-bottom: 16px;
+    border: 1.5px solid #ee6926;
+    border-radius: 5px;
+    font-size: 1rem;
+    background: #fff7f2;
+}
+.menu-edit-form input[type="checkbox"] {
+    margin-right: 6px;
+}
+.menu-edit-form .checkbox-group {
+    margin-bottom: 14px;
+}
+.menu-edit-form textarea {
+    min-height: 60px;
+    resize: vertical;
+}
+.menu-edit-form img {
+    display: block;
+    margin-bottom: 10px;
+    max-height: 70px;
+    border-radius: 6px;
+    border: 1px solid #ee6926;
+}
+.menu-edit-form input[type="file"] {
+    margin-bottom: 18px;
+}
+.menu-edit-form button {
+    background: #ee6926;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 28px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 10px;
+    width: 100%;
+}
+.menu-edit-form button:hover {
+    background: #fa7518;
+}
+.btn-back {
+    color: #ee6926;
+    font-size: 2rem;
+    vertical-align: middle;
+    display: inline-block;
+    margin-bottom: 18px;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.btn-back:hover {
+    color: #2ac558;
+}
