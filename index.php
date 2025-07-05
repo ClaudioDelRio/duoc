@@ -24,7 +24,7 @@ if (session_status() === PHP_SESSION_NONE) session_start();
     <main>
         <section class="hero" id="hero">
             <h1>
-                Bienvenidos a Family Lunch Spa
+                Family Lunch Spa
                 <?php if (isset($_SESSION['cliente_nombre'])): ?>
                     <span class="bienvenida-cliente">
                         | Bienvenido, <?php echo htmlspecialchars($_SESSION['cliente_nombre']); ?>

@@ -225,7 +225,9 @@ header {
 .section-title {
   text-align: center;
   font-size: 2em;
+  font-size: 2.3em;
   margin-bottom: 10px;
+  color: $primario-2
 }
 
 // Descripción de sección centrada.
@@ -233,8 +235,111 @@ header {
   text-align: center;
   color: black;
   margin-bottom: 30px;
+  color: $primario-2;
+  font-size: 2.1em;
 }
-
+.section#section-menu-completo{
+  padding-top: 120px;
+}
+// =============================
+// Estilos para menú completo
+// =============================
+.menu-completo-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+@media (max-width: 900px) {
+  .menu-completo-list {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+// =============================
+// Estilos para el formulario de edición de menú
+.menu-edit-container {
+    max-width: 420px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px #ee69262a;
+    padding: 32px 28px 24px 28px;
+    border: 2px solid #ee6926;
+}
+.menu-edit-title {
+    color: #ee6926;
+    text-align: center;
+    margin-bottom: 18px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.menu-edit-form label {
+    display: block;
+    margin-bottom: 6px;
+    color: #ee6926;
+    font-weight: 500;
+}
+.menu-edit-form input[type="text"],
+.menu-edit-form input[type="number"],
+.menu-edit-form textarea {
+    width: 100%;
+    padding: 8px 10px;
+    margin-bottom: 16px;
+    border: 1.5px solid #ee6926;
+    border-radius: 5px;
+    font-size: 1rem;
+    background: #fff7f2;
+}
+.menu-edit-form input[type="checkbox"] {
+    margin-right: 6px;
+}
+.menu-edit-form .checkbox-group {
+    margin-bottom: 14px;
+}
+.menu-edit-form textarea {
+    min-height: 60px;
+    resize: vertical;
+}
+.menu-edit-form img {
+    display: block;
+    margin-bottom: 10px;
+    max-height: 70px;
+    border-radius: 6px;
+    border: 1px solid #ee6926;
+}
+.menu-edit-form input[type="file"] {
+    margin-bottom: 18px;
+}
+.menu-edit-form button {
+    background: #ee6926;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 28px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 10px;
+    width: 100%;
+}
+.menu-edit-form button:hover {
+    background: #fa7518;
+}
+.btn-back {
+    color: #ee6926;
+    font-size: 2rem;
+    vertical-align: middle;
+    display: inline-block;
+    margin-bottom: 18px;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.btn-back:hover {
+    color: #2ac558;
+}
 // =============================
 // Menú destacados
 // =============================
@@ -485,6 +590,22 @@ header {
 .testimonios-vermas {
   text-align: center;
   margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+  .testimonios-vermas {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  .testimonios-vermas button {
+    width: 100%;
+    max-width: 320px;
+  }
 }
 
 // Botón para ver más testimonios.
@@ -504,6 +625,80 @@ header {
   background: #fff;
   color: $primario-2;
   border: 1.5px solid $primario-2;
+}
+
+// =============================
+// Estilos para el formulario de testimonio
+// =============================
+.section-testimonio-form {
+  background: #fff;
+  padding: 40px 0;
+}
+.testimonio-form-container {
+  max-width: 400px;
+  margin: 0 auto;
+  background: $destacado-2;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px #0001;
+  padding: 30px 24px 24px 24px;
+}
+.form-testimonio label {
+  color: $primario-2;
+  font-weight: 500;
+  margin-bottom: 2px;
+  display: block;
+  margin-top: 10px;
+}
+.form-testimonio input[type="text"],
+.form-testimonio textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  border-radius: 4px;
+  border: 1.5px solid $primario-4;
+  margin-bottom: 12px;
+  font-size: 1em;
+  background: #fff;
+  color: #222;
+  transition: border 0.2s;
+}
+.form-testimonio textarea {
+  resize: none;
+  min-height: 90px;
+  max-height: 150px;
+  height: 110px;
+}
+.form-testimonio input[type="text"]:focus,
+.form-testimonio textarea:focus {
+  border: 1.5px solid $primario-2;
+  outline: none;
+}
+.btn-enviar-testimonio {
+  background: $primario-2;
+  color: #fff;
+  border: 1.5px solid transparent;
+  padding: 10px 0;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+}
+.btn-enviar-testimonio:hover {
+  background: #fff;
+  color: $primario-2;
+  border: 1.5px solid $primario-2;
+}
+.testimonio-form-mensaje {
+  background: #d4edda;
+  color: #155724;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: bold;
 }
 
 // =============================
@@ -1624,4 +1819,42 @@ footer {
     width: 100%;
     margin-bottom: 12px;
   }
+}
+// Cambia el color de las flechas del carrusel de testimonios
+#carouselTestimonios .carousel-control-prev-icon,
+#carouselTestimonios .carousel-control-next-icon {
+  filter: none;
+  background-image: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: $primario-2;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+#carouselTestimonios .carousel-control-prev-icon::after {
+  content: '';
+  display: block;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-top: 0.25rem solid #fff;
+  border-left: 0.25rem solid #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+#carouselTestimonios .carousel-control-next-icon::after {
+  content: '';
+  display: block;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-top: 0.25rem solid #fff;
+  border-right: 0.25rem solid #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
 }
