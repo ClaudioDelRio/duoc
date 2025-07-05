@@ -117,6 +117,7 @@ header {
   cursor: pointer;
   transition: background 0.2s, color 0.2s, border 0.2s;
   text-decoration: none;
+  display: inline-block;
 }
 
 // Hover para los botones principales.
@@ -1552,5 +1553,75 @@ footer {
 @media (max-width: 600px) {
   .admin-table .col-nombre {
     display: none;
+  }
+}
+// =============================
+// Estilos para la sección de testimonios (nueva sección)
+// =============================
+.testimonios-section {
+  max-width: 1200px;
+  margin: 40px auto 0 auto;
+  padding: 0 16px 40px 16px;
+}
+.testimonios-title {
+  text-align: center;
+  color: $primario-2;
+  font-size: 2.2em;
+  margin-bottom: 32px;
+  font-weight: bold;
+}
+.testimonios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 28px;
+}
+.testimonio-card {
+  background: #fff7f2;
+  border: 2px solid $primario-2;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px #ee69262a;
+  padding: 22px 18px 18px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 160px;
+  transition: box-shadow 0.2s;
+}
+.testimonio-card:hover {
+  box-shadow: 0 4px 24px #ee69263a;
+}
+.testimonio-nombre {
+  color: $primario-2;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 1.1em;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.testimonio-texto {
+  color: #444;
+  font-size: 1.05em;
+  line-height: 1.5;
+}
+.testimonios-group {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}
+@media (max-width: 900px) {
+  .testimonios-group {
+    gap: 12px;
+  }
+}
+@media (max-width: 600px) {
+  .testimonios-group {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+  .testimonios-group .testimonio {
+    width: 100%;
+    margin-bottom: 12px;
   }
 }
