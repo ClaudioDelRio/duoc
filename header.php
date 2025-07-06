@@ -15,7 +15,12 @@ if (session_status() === PHP_SESSION_NONE) session_start();
             <nav>
                 <a href="index.php#section-menu">Menús</a>
                 <a href="index.php#hero">Reservas</a>
-                <a href="#">Pedidos</a>
+                <a href="#" id="btnPedidos">Pedidos</a>
+<script>
+// Variable global para saber si el cliente está logueado (usada por pedidos.js)
+window.pedidosClienteLogueado = <?php echo isset($_SESSION['cliente_id']) ? 'true' : 'false'; ?>;
+</script>
+<script src="assets/js/pedidos.js"></script>
                 <a href="index.php#experiencia">Experiencia</a>
                 <a href="./nosotros.php">Nosotros</a>
                 <a href="#" id="abrirModalContacto">Consultas</a>
