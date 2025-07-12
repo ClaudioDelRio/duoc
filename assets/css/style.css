@@ -268,6 +268,30 @@ header {
     align-items: center;
   }
 }
+.menu-card .btn-detalles {
+  display: block;
+  width: 100%;
+  margin-top: 18px;
+  background: #ee6926;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1.08em;
+  padding: 12px 0;
+  text-align: center;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.0666666667);
+}
+
+.menu-card .btn-detalles:hover {
+  background: #fff;
+  color: #ee6926;
+  border: 1.5px solid #ee6926;
+  text-decoration: none;
+}
+
 .detalle-menu-card {
   max-width: 600px;
   margin: 0 auto;
@@ -278,6 +302,31 @@ header {
   flex-direction: column;
   align-items: center;
   padding: 40px 30px 30px 30px;
+}
+
+.btn-volver-menu-completo {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  margin: 30px auto 0 auto;
+  background: #ee6926;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1.08em;
+  padding: 12px 0;
+  text-align: center;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.0666666667);
+}
+
+.btn-volver-menu-completo:hover {
+  background: #fff;
+  color: #ee6926;
+  border: 1.5px solid #ee6926;
+  text-decoration: none;
 }
 
 .detalle-menu-card figure {
@@ -2321,6 +2370,19 @@ footer {
     padding: 7px 4px;
     font-size: 0.98em;
   }
+}
+.menu-nombre-principal {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 1.35em;
+  color: #ee6926;
+  font-weight: bold;
+  margin: 10px 0 0 0;
+  line-height: 1.2;
+  white-space: normal;
+  word-break: break-word;
+  max-width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

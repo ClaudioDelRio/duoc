@@ -62,7 +62,6 @@ if (session_status() === PHP_SESSION_NONE) session_start();
                 <article class="menu-card">
                     <figure>
                         <img src="<?php echo htmlspecialchars($destacados['especialidad']['me_imagen']); ?>" alt="<?php echo htmlspecialchars($destacados['especialidad']['me_menu']); ?>">
-                        <figcaption><?php echo htmlspecialchars($destacados['especialidad']['me_menu']); ?></figcaption>
                     </figure>
                     <div class="info">
                         <div class="etiqueta">Especialidad</div>
@@ -77,7 +76,6 @@ if (session_status() === PHP_SESSION_NONE) session_start();
                 <article class="menu-card">
                     <figure>
                         <img src="<?php echo htmlspecialchars($destacados['mas_vendido']['me_imagen']); ?>" alt="<?php echo htmlspecialchars($destacados['mas_vendido']['me_menu']); ?>">
-                        <figcaption><?php echo htmlspecialchars($destacados['mas_vendido']['me_menu']); ?></figcaption>
                     </figure>
                     <div class="info">
                         <div class="destacado">Más Vendido</div>
@@ -92,7 +90,6 @@ if (session_status() === PHP_SESSION_NONE) session_start();
                 <article class="menu-card">
                     <figure>
                         <img src="<?php echo htmlspecialchars($destacados['infantil']['me_imagen']); ?>" alt="<?php echo htmlspecialchars($destacados['infantil']['me_menu']); ?>">
-                        <figcaption><?php echo htmlspecialchars($destacados['infantil']['me_menu']); ?></figcaption>
                     </figure>
                     <div class="info">
                         <div class="favorito">Favorito Infantil</div>

@@ -1,4 +1,5 @@
 
+
 // =============================
 // Variables de colores oficiales
 // =============================
@@ -310,6 +311,31 @@ header {
   }
 }
 // =============================
+// Botón de detalles en menú completo
+// =============================
+.menu-card .btn-detalles {
+  display: block;
+  width: 100%;
+  margin-top: 18px;
+  background: $primario-2;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1.08em;
+  padding: 12px 0;
+  text-align: center;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: 0 2px 8px #0001;
+}
+.menu-card .btn-detalles:hover {
+  background: #fff;
+  color: $primario-2;
+  border: 1.5px solid $primario-2;
+  text-decoration: none;
+}
+// =============================
 // Estilos para la página de detalle de menú (detalle_menu.php)
 // =============================
 .detalle-menu-card {
@@ -322,6 +348,30 @@ header {
   flex-direction: column;
   align-items: center;
   padding: 40px 30px 30px 30px;
+}
+// Botón volver al menú completo en detalle_menu.php
+.btn-volver-menu-completo {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  margin: 30px auto 0 auto;
+  background: $primario-2;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1.08em;
+  padding: 12px 0;
+  text-align: center;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: 0 2px 8px #0001;
+}
+.btn-volver-menu-completo:hover {
+  background: #fff;
+  color: $primario-2;
+  border: 1.5px solid $primario-2;
+  text-decoration: none;
 }
 .detalle-menu-card figure {
   width: 100%;
@@ -2396,4 +2446,19 @@ footer {
     padding: 7px 4px;
     font-size: 0.98em;
   }
+}
+// =============================
+// Nombre principal del plato en menú completo
+.menu-nombre-principal {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 1.35em;
+  color: $primario-2;
+  font-weight: bold;
+  margin: 10px 0 0 0;
+  line-height: 1.2;
+  white-space: normal;
+  word-break: break-word;
+  max-width: 100%;
 }

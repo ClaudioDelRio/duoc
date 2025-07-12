@@ -37,11 +37,11 @@ if (!$plato) {
     </header>
     <main>
         <section class="section" id="section-detalle-menu">
-            <div class="section-title" style="margin-top: 90px;">Detalle del Plato</div>
+            <div class="section-title" style="margin-top: 50px;">Detalle del Plato</div>
             <div class="detalle-menu-card">
                 <figure>
                     <img src="<?php echo htmlspecialchars($plato['me_imagen']); ?>" alt="<?php echo htmlspecialchars($plato['me_menu']); ?>">
-                    <figcaption><?php echo htmlspecialchars($plato['me_menu']); ?></figcaption>
+                    
                 </figure>
                 <div class="info">
                     <?php if ($plato['me_especialidad']): ?><div class="etiqueta">Especialidad</div><?php endif; ?>
@@ -53,9 +53,9 @@ if (!$plato) {
                     <div class="precio">$<?php echo number_format($plato['me_valor'], 0, ',', '.'); ?></div>
                 </div>
             </div>
-            <div style="text-align:center; margin-top:30px;">
-                <a href="menu_completo.php" class="btn-menu-completo">Volver al Menú Completo</a>
-            </div>
+            <a href="#" class="btn-volver-menu-completo" onclick="window.history.back(); return false;">
+                <i class="bi bi-arrow-left" style="margin-right:8px;"></i>Volver
+            </a>
         </section>
     </main>
     <footer>

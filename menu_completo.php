@@ -30,15 +30,14 @@ if (session_status() === PHP_SESSION_NONE) session_start();
                 <article class="menu-card">
                     <figure>
                         <img src="<?php echo htmlspecialchars(preg_replace('/^proyecto\//', '', $plato['me_imagen'])); ?>" alt="<?php echo htmlspecialchars($plato['me_menu']); ?>">
-                        <figcaption><?php echo htmlspecialchars($plato['me_menu']); ?></figcaption>
+                        <figcaption class="menu-nombre-principal"><?php echo htmlspecialchars($plato['me_menu']); ?></figcaption>
                     </figure>
                     <div class="info">
-                        <?php if ($plato['me_especialidad']): ?><div class="etiqueta">Especialidad</div><?php endif; ?>
-                        <?php if ($plato['me_mas_vendido']): ?><div class="destacado">Más Vendido</div><?php endif; ?>
-                        <?php if ($plato['me_infantil']): ?><div class="favorito">Favorito Infantil</div><?php endif; ?>
-                        <h3><?php echo htmlspecialchars($plato['me_menu']); ?></h3>
+                        
+                        <!-- Nombre eliminado, solo se muestra en figcaption -->
                         <p><?php echo htmlspecialchars($plato['me_resena']); ?></p>
                         <div class="precio">$<?php echo number_format($plato['me_valor'], 0, ',', '.'); ?></div>
+                        <a class="btn-detalles" href="detalle_menu.php?id=<?php echo $plato['me_id']; ?>">Ver Detalles</a>
                     </div>
                 </article>
                 <?php endforeach; ?>
