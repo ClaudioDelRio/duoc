@@ -310,6 +310,89 @@ header {
   }
 }
 // =============================
+// Estilos para la página de detalle de menú (detalle_menu.php)
+// =============================
+.detalle-menu-card {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px #0002;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 30px 30px 30px;
+}
+.detalle-menu-card figure {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 25px;
+}
+.detalle-menu-card img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px #0001;
+  margin-bottom: 10px;
+}
+.detalle-menu-card figcaption {
+  font-size: 1.3em;
+  color: $primario-2;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.detalle-menu-card .info {
+  width: 100%;
+  text-align: center;
+}
+.detalle-menu-card .etiqueta,
+.detalle-menu-card .destacado,
+.detalle-menu-card .favorito {
+  display: inline-block;
+  margin: 0 6px 10px 6px;
+  padding: 4px 12px;
+  border-radius: 8px;
+  font-size: 1em;
+  font-weight: 500;
+}
+.detalle-menu-card .etiqueta { background: $primario-1; color: #fff; }
+.detalle-menu-card .destacado { background: $destacado-1; color: #fff; }
+.detalle-menu-card .favorito { background: $secundario-1; color: #222; }
+.detalle-menu-card h3 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: $primario-2;
+}
+.detalle-menu-card .resena {
+  font-size: 1.1em;
+  color: $primario-4;
+  margin-bottom: 18px;
+}
+.detalle-menu-card .descripcion {
+  font-size: 1.15em;
+  color: #222;
+  margin-bottom: 18px;
+  background: #f8f8f8;
+  border-radius: 8px;
+  padding: 18px 12px;
+  box-shadow: 0 1px 6px #0001;
+}
+.detalle-menu-card .precio {
+  font-size: 1.5em;
+  color: $primario-2;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+@media (max-width: 700px) {
+  .detalle-menu-card {
+    padding: 20px 8px 18px 8px;
+  }
+  .detalle-menu-card img {
+    max-width: 95vw;
+  }
+}
+// =============================
 // Estilos para el formulario de edición de menú
 .menu-edit-container {
     max-width: 420px;

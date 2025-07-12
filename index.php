@@ -69,7 +69,7 @@ if (session_status() === PHP_SESSION_NONE) session_start();
                         <h3><?php echo htmlspecialchars($destacados['especialidad']['me_menu']); ?></h3>
                         <p><?php echo htmlspecialchars($destacados['especialidad']['me_resena']); ?></p>
                         <div class="precio">$<?php echo number_format($destacados['especialidad']['me_valor'], 0, ',', '.'); ?></div>
-                        <button class="btn-detalles">Ver Detalles</button>
+                        <a class="btn-detalles" href="detalle_menu.php?id=<?php echo $destacados['especialidad']['me_id']; ?>">Ver Detalles</a>
                     </div>
                 </article>
                 <?php endif; ?>
@@ -84,7 +84,7 @@ if (session_status() === PHP_SESSION_NONE) session_start();
                         <h3><?php echo htmlspecialchars($destacados['mas_vendido']['me_menu']); ?></h3>
                         <p><?php echo htmlspecialchars($destacados['mas_vendido']['me_resena']); ?></p>
                         <div class="precio">$<?php echo number_format($destacados['mas_vendido']['me_valor'], 0, ',', '.'); ?></div>
-                        <button class="btn-detalles">Ver Detalles</button>
+                        <a class="btn-detalles" href="detalle_menu.php?id=<?php echo $destacados['mas_vendido']['me_id']; ?>">Ver Detalles</a>
                     </div>
                 </article>
                 <?php endif; ?>
@@ -99,7 +99,7 @@ if (session_status() === PHP_SESSION_NONE) session_start();
                         <h3><?php echo htmlspecialchars($destacados['infantil']['me_menu']); ?></h3>
                         <p><?php echo htmlspecialchars($destacados['infantil']['me_resena']); ?></p>
                         <div class="precio">$<?php echo number_format($destacados['infantil']['me_valor'], 0, ',', '.'); ?></div>
-                        <button class="btn-detalles">Ver Detalles</button>
+                        <a class="btn-detalles" href="detalle_menu.php?id=<?php echo $destacados['infantil']['me_id']; ?>">Ver Detalles</a>
                     </div>
                 </article>
                 <?php endif; ?>
