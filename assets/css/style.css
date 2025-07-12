@@ -2371,18 +2371,5 @@ footer {
     font-size: 0.98em;
   }
 }
-.menu-nombre-principal {
-  display: block;
-  width: 100%;
-  text-align: center;
-  font-size: 1.35em;
-  color: #ee6926;
-  font-weight: bold;
-  margin: 10px 0 0 0;
-  line-height: 1.2;
-  white-space: normal;
-  word-break: break-word;
-  max-width: 100%;
-}
 
 /*# sourceMappingURL=style.css.map */
