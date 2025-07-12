@@ -92,6 +92,7 @@ header {
   height: 50px;
   width: auto;
   display: inline-block;
+  margin-left: 10px;
 }
 
 .navbar nav a {
