@@ -2520,3 +2520,200 @@ footer {
     transform: scale(1.05);
   }
 }
+// menu hamburgueza cliente usuario
+.solo-movil {
+            display: none;
+        }
+        @media (max-width: 768px) {
+            .solo-movil {
+                display: block;
+            }
+        }
+/* Estilos específicos para móviles formulario pedidos.php */
+@media (max-width: 600px) {
+    .pedido-container {
+        margin-top: 20px;
+        padding: 10px 8px;
+        border-width: 1px;
+        border-radius: 8px;
+    }
+    
+    .pedido-titulo {
+        font-size: 1.3rem;
+        margin-bottom: 12px;
+    }
+    
+    .pedido-form {
+        padding: 10px 8px;
+        margin-bottom: 15px;
+    }
+    
+    .pedido-form-title {
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+    }
+    
+    .pedido-form-row {
+        flex-direction: column;
+        gap: 8px;
+        align-items: stretch;
+    }
+    
+    .pedido-form-menu {
+        flex: none;
+        min-width: auto;
+        width: 100%;
+    }
+    
+    .pedido-form-cantidad {
+        flex: none;
+        min-width: auto;
+        width: 100%;
+    }
+    
+    .pedido-form-btn {
+        flex: none;
+        min-width: auto;
+        width: 100%;
+        margin-top: 5px;
+        display: block;
+    }
+    
+    .pedido-select-menu,
+    .pedido-input-cantidad {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .pedido-detalle-table {
+        font-size: 0.9em;
+    }
+    
+    .pedido-detalle-table th, .pedido-detalle-table td {
+        padding: 6px 3px;
+        font-size: 0.9em;
+    }
+    
+    .pedido-btn-agregar {
+        padding: 8px 0;
+        font-size: 1em;
+        width: 100%;
+    }
+    
+    /* Ajuste para el botón de finalizar pedido */
+    form[action="procesar_pedido.php"] .btn-orange {
+        font-size: 1em !important;
+        padding: 10px 20px !important;
+        width: 100%;
+        max-width: 250px;
+    }
+}
+.btn-volver {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #6ec2a3;
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(110, 194, 163, 0.3);
+            margin-top: 25px;
+        }
+        
+        .btn-volver:hover {
+            background: #5ba892;
+            color: #fff;
+            text-decoration: none;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(110, 194, 163, 0.4);
+        }
+        
+        .btn-volver i {
+            font-size: 1.1em;
+        }
+        
+        .registro-switch {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        @media (max-width: 600px) {
+            .btn-volver {
+                padding: 10px 16px;
+                font-size: 0.95rem;
+                width: 100%;
+                justify-content: center;
+                max-width: 250px;
+            }
+        }
+// registro de cliente estilos
+.clientes-stats {
+        margin-bottom: 20px;
+        text-align: right;
+    }
+    
+    .stats-badge {
+        background: #ff6600;
+        color: white;
+        padding: 8px 15px;
+        border-radius: 20px;
+        font-size: 14px;
+        font-weight: bold;
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+    }
+    
+    .no-data {
+        text-align: center;
+        font-style: italic;
+        color: #666;
+        padding: 20px;
+    }
+    
+    .admin-table td {
+        vertical-align: middle;
+    }
+    
+    @media (max-width: 768px) {
+        .admin-table {
+            font-size: 12px;
+        }
+        
+        .col-nombre {
+            min-width: 120px;
+        }
+        
+        .col-fecha {
+            min-width: 100px;
+        }
+        
+        .clientes-stats {
+            text-align: center;
+        }
+    }
+.alert {
+        padding: 12px 15px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-weight: 500;
+    }
+    
+    .alert-success {
+        background-color: #d4edda;
+        color: #155724;
+        border: 1px solid #c3e6cb;
+    }
+    
+    .alert-error {
+        background-color: #f8d7da;
+        color: #721c24;
+        border: 1px solid #f5c6cb;
+    }

@@ -40,6 +40,7 @@ if (session_status() === PHP_SESSION_NONE) session_start();
                   <a href="./nosotros.php">Nosotros</a>
                   <a href="#" id="abrirModalContacto">Consultas</a>
                   <a href="index.php#contacto">Contacto</a>
+                  <a href="clientes/registro.php" class="solo-movil">Clientes</a>
               </nav>
               <div class="btns">
                   <button class="btn-orange" id="abrirModalLogin">Administración</button>

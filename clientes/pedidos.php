@@ -35,6 +35,9 @@ if (isset($_SESSION['pedido_mensaje'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Realizar Pedido | Family Lunch SpA</title>
     <link rel="stylesheet" href="../assets/css/style.css">
+    <!-- Bootstrap Icons CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+   
 </head>
 <body>
     <div class="pedido-container">
@@ -68,18 +71,19 @@ if (isset($_SESSION['pedido_mensaje'])) {
 
         <!-- Detalle del pedido actual (en sesión, antes de guardar en la base de datos) -->
         <h3 class="pedido-detalle-title">Detalle del Pedido en Curso</h3>
-        <table class="admin-table pedido-detalle-table">
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Menú</th>
-                    <th>Cantidad</th>
-                    <th>Precio unitario</th>
-                    <th>Subtotal</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
+        <div class="table-responsive">
+            <table class="admin-table pedido-detalle-table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Menú</th>
+                        <th>Cantidad</th>
+                        <th>Precio</th>
+                        <th>Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
                 // Mostrar detalle del pedido en curso (guardado en $_SESSION['pedido_detalle'])
                 if (!isset($_SESSION['pedido_detalle'])) $_SESSION['pedido_detalle'] = [];
                 // Procesar el POST para agregar detalle
@@ -133,13 +137,14 @@ if (isset($_SESSION['pedido_mensaje'])) {
 
         <!-- Botón para finalizar y guardar el pedido -->
         <form method="POST" action="procesar_pedido.php" style="text-align:center; margin-top:18px;">
-            <button type="submit" class="btn-orange pedido-btn-agregar" style="font-size:1.1em; padding:12px 36px;">Finalizar y Guardar Pedido</button>
+            <button type="submit" class="btn-orange pedido-btn-agregar" style="font-size:1.1em; padding:12px 36px;">Finalizar Pedido</button>
         </form>
 
-
-
         <div class="registro-switch">
-            <a href="../index.php" class="switch-link">Volver al inicio</a>
+            <a href="../index.php" class="btn-volver">
+                <i class="bi bi-house-door"></i>
+                Volver al inicio
+            </a>
         </div>
     </div>
 </body>
