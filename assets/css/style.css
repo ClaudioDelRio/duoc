@@ -2613,4 +2613,146 @@ footer {
   border: 1px solid #f5c6cb;
 }
 
+.pedidos-stats {
+  margin-bottom: 20px;
+  text-align: right;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.stats-badge {
+  background: #ff6600;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.stats-despachados {
+  background: #28a745;
+}
+
+.stats-pendientes {
+  background: #ffc107;
+  color: #000;
+}
+
+.no-data {
+  text-align: center;
+  font-style: italic;
+  color: #666;
+  padding: 20px;
+}
+
+.pedido-despachado {
+  background-color: #f8fff8;
+}
+
+.pedido-pendiente {
+  background-color: #fffbf0;
+}
+
+.estado-despachado {
+  color: #28a745;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.estado-pendiente {
+  color: #ffc107;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.precio-total {
+  font-weight: bold;
+  color: #ff6600;
+}
+
+.btn-ver-detalle {
+  background: #007bff;
+  color: white;
+  padding: 5px 8px;
+  border-radius: 3px;
+  text-decoration: none;
+  margin-right: 5px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.btn-ver-detalle:hover {
+  background: #0056b3;
+  color: white;
+}
+
+.btn-marcar-despachado {
+  background: #28a745;
+  color: white;
+  padding: 5px 8px;
+  border-radius: 3px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.btn-marcar-despachado:hover {
+  background: #1e7e34;
+  color: white;
+}
+
+.btn-marcar-pendiente {
+  background: #ffc107;
+  color: #000;
+  padding: 5px 8px;
+  border-radius: 3px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.btn-marcar-pendiente:hover {
+  background: #e0a800;
+  color: #000;
+}
+
+.alert {
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+}
+
+.alert-success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+@media (max-width: 768px) {
+  .admin-table {
+    font-size: 12px;
+  }
+  .pedidos-stats {
+    justify-content: center;
+    text-align: center;
+  }
+  .stats-badge {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */

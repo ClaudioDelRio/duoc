@@ -43,10 +43,10 @@ if (!isset($_SESSION['u_id'])) {
                     <h3>Gestión de Usuarios</h3>
                     <div class="proximamente" style="color: #ff6600; font-weight: bold;">Ir a gestión</div>
                 </div>
-                <div class="admin-card">
+                <div class="admin-card" onclick="window.location.href='lista_pedidos.php'" style="cursor:pointer;">
                     <i class="bi bi-journal-text"></i>
                     <h3>Gestión de Pedidos</h3>
-                    <div class="proximamente">Próximamente</div>
+                    <div class="proximamente" style="color: #ff6600; font-weight: bold;">Ver pedidos</div>
                 </div>
                                 
                 <div class="admin-card" onclick="window.location.href='registro_clientes.php'" style="cursor:pointer;">
